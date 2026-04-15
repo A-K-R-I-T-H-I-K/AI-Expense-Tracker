@@ -102,7 +102,6 @@ python-dotenv
 | Health | gym, doctor |
 | Shopping | shopping, clothes |
 | Maintainence | chain lube, bike wash, waterwash |
-| (others) | classified by LLM |
 
 ---
 
