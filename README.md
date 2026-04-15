@@ -31,7 +31,7 @@ A Streamlit app that parses raw expense text, auto-categorizes transactions usin
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/ai-expense-analyzer.git
+git clone https://github.com/A-K-R-I-T-H-I-K/AI-Expense-Tracker.git
 cd ai-expense-analyzer
 ```
 
