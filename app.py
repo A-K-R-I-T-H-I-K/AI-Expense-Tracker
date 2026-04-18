@@ -80,12 +80,12 @@ def categorize(desc):
     categories = {
         "Food": ["breakfast", "bf", "idli", "dosa", "lunch", "meal", "dinner",
                  "tea", "coffee", "snacks", "egg", "juice", "lays", "cake",
-                 "ice cream", "fruits", "momo", "milkshake", "biriyani", "sprouts", "biscuit"],
-        "Travel": ["petrol", "uber", "bus", "metro"],
+                 "ice cream", "fruits", "momo", "milkshake", "biriyani", "sprouts", "biscuit","kitkat","coconut","chicken"],
+        "Travel": ["petrol", "uber", "bus", "metro","parking"],
         "Bills": ["recharge", "wifi", "withdraw"],
-        "Health": ["gym", "doctor"],
+        "Health": ["gym", "doctor","medicine"],
         "Shopping": ["shopping", "clothes"],
-        "Maintainence": ["chain lube", "bike wash", "waterwash"]
+        "Maintainence": ["chain lube", "bike wash", "waterwash","dress iron"]
     }
 
     for cat, keys in categories.items():
@@ -232,7 +232,8 @@ if st.session_state.df is not None:
     st.subheader("📊 Summary")
 
     summary = df.groupby("category")["amount"].sum()
-
+    total = df["amount"].sum()
+    st.metric("💰 Total Spend", f"₹{total:.2f}")
     cols = st.columns(len(summary))
 
     for i, (cat, amt) in enumerate(summary.items()):
